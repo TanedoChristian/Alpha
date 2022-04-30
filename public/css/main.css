@@ -1,0 +1,711 @@
+@import url(//db.onlinewebfonts.com/c/b82329475307e0380dc1ea23f0c35266?family=adineue+PRO);
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 20px #9ecaed;
+}
+
+
+.font {
+	font-family: 'Roboto', sans-serif;
+	font-family: "AdineuePRO", Helvetica, Arial, sans-serif;
+	font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary-color: ;
+    --secondary-color: ;
+    --bg-white: white;
+    --bg-black: black;
+    --bg-orange: orange;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+
+}
+
+.prev-container, .next-container {
+    align-items: center;
+    height: 100%;
+    width: 8%;
+    background-color: rgba(26,26,26,0.3);
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+
+.next {
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+
+}
+.prev {
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 100%;
+    position: sticky;
+    background-color: white;
+}
+
+.login-container {
+    margin: 0 1rem;
+    gap: 1rem;
+    color: var(--bg-black);
+    flex-wrap: wrap;   
+    max-width: 100%;
+    height: 4.9vh;
+    color: white;
+
+   
+}
+
+
+
+.line {
+    border-left: 2px solid #e52b1b;
+    height: 50%;
+    margin-top: 5px;
+}
+
+.login-container a {
+    font-family: "AdineuePRO", Helvetica, Arial, sans-serif;
+    font-size: 0.7em;
+    letter-spacing: 1px;    
+    color: #e52b1b;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+
+
+.circle:hover {
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.navbar {
+    max-width: 100%;
+    gap: 1rem;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #e52b1b;
+    height: 10vh;
+    
+
+ 
+}
+
+.header-logo {
+    width: 50%;
+    height: 100%;
+    font-size: 0.8rem;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+
+
+
+
+.header-logo h2 {
+    margin-left: 3%;
+}
+
+.search-bar {
+    width: 35%;
+    height: 70%;
+    border: 1px solid gainsboro;
+    border-radius: 5px;  
+    background-color: white;
+  
+    
+}
+
+.search-bar input[type="text"] {
+    width: 90%;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    padding: 10px;
+}
+
+.search-bar input[type="text"]::placeholder {
+    letter-spacing: 1px;
+ 
+}
+
+
+
+.search-icon-container {
+    align-items: center;
+    justify-content: center;
+    width: 15%;   
+    cursor: pointer;
+    margin: 4px;
+    background-color: #e52b1b;
+}
+
+.search-icon-container:hover {
+    background-color: orange;
+}
+
+.search-icon {
+    font-size: 500px;
+    
+}
+.shopping-cart-container {
+
+    height: 80%;
+    width: 10%;
+    justify-content: space-around;
+    align-items: center;
+  
+   
+    
+}
+
+.material-icons.md-48 { font-size: 40px; }
+
+main {
+    margin-top: 0.5rem;
+    gap: 1rem;
+}
+
+.image-banner-container {
+    
+    height: 70vh;
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+
+   
+}
+
+.first-image, .second-image {
+  width: 60%;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.first-image {
+   display: flex;
+    
+}
+
+.second-image {
+    background: url('../img/summer-salee.webp');
+    background-size: cover;
+    justify-content: flex-end;
+    
+}
+
+.category-list {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 20vh;
+}
+
+
+
+
+
+.circle-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.circle-wrapper {
+    text-align: center;
+}
+
+
+.circle-wrapper > *{
+    width: 66%;
+
+}
+
+
+.circle-img {
+    max-width: 100%;
+}
+
+
+.dot-container {
+    justify-content: center;
+   
+
+
+}
+
+
+
+.flash-deals {
+    height: 33vh;
+
+    background-color: #ebebeb;
+    margin: 2px;
+}
+
+.flash-deals h1 {
+    font-weight: 800;
+    color: #e52b1b;
+    padding: 10px;
+}
+
+
+.material-icons {
+    color: white;
+}
+
+.search-icon {
+    color: white;
+    
+}
+
+
+/*
+*
+*
+*
+Login
+*/
+
+.login-page h1 {
+    font-family: "AdineuePRO",Helvetica,Arial,sans-serif;
+    font-weight: 780;
+    font-size: 2em;
+    
+}
+
+.login-section-container-page {
+    background-color: white;
+    height: 80vh;
+    justify-content: center;
+    
+}
+
+.login-container-page {
+    height: 100%;
+    border-right: 1px  solid #dbdbdb;
+    width: 70%;
+    justify-content: center;
+    border-left: 1px solid #dbdbdb;
+   
+    
+    
+}
+
+.login-page {
+    width: 80%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.form-container {
+   
+    height: 40%;
+    
+}
+
+.inputs {
+    margin-top: 20px;
+    height: 60%;
+}
+
+.input-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.input-container input[type="text"], input[type="password"]{
+    padding: 16px 16px;
+    width: 80%;
+    font-size: 1em;
+    border: 1px  solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.input-container a {
+    text-decoration: none;
+    font-weight: 100;
+    color: black;
+}
+
+.login-button {
+    width: 50%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    letter-spacing:3px;
+    border: none;
+}
+
+.view-login-h1, .view-login {
+    color: black;
+    cursor: pointer;
+    
+}
+
+.view-login-h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.view-login-navbar{
+    background-color: white;
+}
+
+.image-banner {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    background-color: #ebebeb;
+    
+  
+   
+}
+
+
+
+.view-signup-btn {
+ 
+    width: 50%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color: black;
+}
+
+
+.view-signup-btn:hover {
+    background-color: #e52b1b;
+    cursor: pointer;
+}
+
+.view-signup-btn h3 {
+    color: white;
+}
+
+
+.view-login-h2 {
+    color: #e52b1b;
+}
+
+.east {
+   color: white;
+}
+
+
+
+.register-form-container {
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    background-color: white ;
+}
+
+
+.register-form {
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.white {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.name-container {
+
+    display: flex;
+    width: 90%;
+    gap: 2rem;
+    
+    
+}
+
+.register-form input[type="text"], .register-form input[type="submit"]{
+    height: 50px;
+    width: 60%;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    padding: 12px;
+    
+}
+
+.submit {
+    background-color: black;
+    color: white;
+    letter-spacing: 3px;
+  
+}
+
+.terms-condition {
+    width: 60%;
+    align-items: center;
+    gap: 5rem;
+}
+
+.terms-conditon p {
+    margin-top: 2px;
+}
+
+.green {
+    color: green
+}
+
+.age {
+    padding: 10px 5px;
+}
+
+#category {
+    color: white;
+}
+
+.sr{
+    display: block;
+}
+
+.sl {
+    display: none;
+}
+
+.user-profile p {
+    font-size: 15px;
+}
+
+.h3 {
+    color: red;
+}
+
+.deals-container {
+    flex-wrap: wrap; 
+    height: 65%;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+.deals-card {
+   max-width: 10%;
+   min-width: 100px;
+}
+
+img {
+    max-width:100%;
+    height: 100%;
+}
+
+
+
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+
+.copyright-text{
+    color: white;
+}
+
+
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+
+
+.section-2 {
+    height: 50vh;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 4%;
+    
+}
+
+.section-2 h1 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.section-2 p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+.section-2 input {
+    padding: 5% 30%;
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: #ebebeb;
+}
+
+.submit-concern {
+    border-radius: 5px;
+    background-color: black;
+    width: 10%;
+    text-align: center;
+
+
+    
+}
+
+.submit-concern a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.submit-concern:hover {
+    background-color: orange;
+}
+
+.p-container {
+    width: 50%;
+
+}
+
+.p-container p {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.shop {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #e52b1b;
+}
+
+.deals-card:hover {
+    margin-top: -10px;
+    padding-bottom: 10px;
+    border: 2px solid #ebebeb;
+    cursor: pointer;
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 20px #e52b1b;
+}
+
+#signup a,  .login-btn{
+    color: white;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    color: white;
+}
+
+.error-container {
+    color: red;
+    text-align: left;
+}

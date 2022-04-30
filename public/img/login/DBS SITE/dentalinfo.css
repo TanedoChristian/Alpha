@@ -1,0 +1,18 @@
+.dentalbutton{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+.dentalbutton button{
+    background-color: #1F2B6C;
+    height: 35px;
+    width: fit-content;
+    border-radius: 10px;
+    margin-left: 10x;
+    margin-right: 10px;
+}
+
+.dentalbutton a{
+    color: white;
+    text-decoration: none;
+}

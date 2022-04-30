@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+}
+
+.dropdown{
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1F2B6C;
+}
+
+.home{
+    margin-left: 20px;
+    margin-right: 800px;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+nav ul li {
+    margin-top: 10px;
+    list-style-type: none;
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 15px;
+    color: white;
+}
+
+nav ul li a:hover{
+    background: #6F80DD;
+}
+
+nav ul ul{
+    padding-top: 12px;
+    background-color: #1F2B6C;
+    position: absolute;
+    display: none;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li{
+    width: 160px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+
+.doctor{
+    display: flex;
+    justify-content: center;
+}
+
+.doc{
+    text-align: center;
+    width: 220px;
+    height: fit-content;
+    margin: 10px;
+    border: 3px solid #1F2B6C;;
+    background-color: #BFD2F8;
+}
+
+h3.name{
+    font-weight: 100;
+    color: #1F2B6C;
+    line-height: 0;
+}
+
+h3.role{
+    font-weight: 500;
+    color: #1F2B6C;
+    font-weight: bold;
+    line-height: 0.5;
+}
+
+.title1 , .title2{
+    text-align: center;
+}
+
+.title1{
+    line-height: 2;
+    color:#159EEC;
+}
+
+.title2{
+    font-size: 20px;
+    line-height: 0.1;
+    color: #1F2B6C;
+}
+
+button{
+    margin-bottom: 0px;
+    padding-top: 0px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #1F2B6C;
+}
+
+.doc button a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.doc button {
+    margin-top: 5%;
+    
+ }
+
+.socmed{
+    margin-top: 20px;
+}
+
+.footer{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1F2B6C;
+}
+
+.left h2{
+    color: #BFD2F8; 
+}
+
+.footer p , h4, h5{
+    color: #FCFEFE;
+}
+
+.info{
+    background-color: #BFD2F8;
+}
+
+    
+}

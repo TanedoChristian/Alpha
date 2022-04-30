@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="nursemedrecords.css">
+    <link rel="stylesheet" type="text/css" href="heading.css">
+    <title>Clinique - Home</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="clinic">
+            <h1>CLIN<span class="diff">IQUE</span></h1>
+        </div>
+
+        <div class= "emergency">
+            <img src="phone-call.png" alt="" style="width:20px;height:30px;" class="icon">
+            <h2>EMERGENCY</h2>
+            <h3>681-812-255</h3>
+        </div>
+
+        <div class= "workhr">
+            <img src="clock.png" alt="" style="width:20px;height:30px;" class="icon">
+            <h2>WORK HOUR</h2>
+            <h3>8:00-16:00 </h3>
+        </div>
+
+        <div class="loc">
+            <img src="phone-call.png" alt="" style="width:20px;height:30px;" class="icon">
+            <h2>LOCATION</h2>
+            <h3>Sanciangko St.</h3>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <nav>
+            <ul>
+                <li class="home"><a href="home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>   
+                <li><a href="#">Medical Record</a>
+                    <ul>
+                        <li><a href="nursemedform.html">Medical Info</a></li>
+                        <li><a href="#">Immunization</a></li>
+                        <li><a href="#">Deworm</a></li>
+                    </ul>       
+                </li>
+            <li><a href="#">Dental Info</a></li>
+            <li><a href="#">Check-up Result</a></li>
+            <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>     
+    </div>
+
+    <h1><center> New Medical Info </center></h1>
+
+    <div class="formcontainer">
+        <form action="#">
+            <label for="" class="lbl">ID Number: </label>
+            <input type="text" id="" name="" class="box"><br>
+            <label for="height" class="lbl">Height(cm): </label>
+            <input type="text" id="" name="" class="box"><br>
+            <label for="weight" class="lbl">Weight(kg): </label>
+            <input type="text" id="" name="" class="box"><br>
+            <label for="bp" class="lbl">Blood Pressure: </label>
+            <input type="text" id="" name="" class="box"><br>
+            <label for="temp" class="lbl">Temperature: </label>
+            <input type="text" id="" name="" class="box"><br>
+            <label for="rate" class="lbl">Heart Rate: </label>
+            <input type="text" id="" name="" class="box"><br>
+            <label for="petsa" class="lbl">Date: </label>
+            <input type="date" id="" name="" class="box"><br><br>
+            
+            <button class="back"><a href="nursemedinfo.html">Back</a></button>
+            <input type="reset" value="Cancel">
+            <input type="submit" value="Submit">
+        </form>
+</body>
+</html>
