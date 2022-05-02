@@ -709,3 +709,77 @@ img {
     color: red;
     text-align: left;
 }
+
+.header-logo ul {
+	display: flex;
+	gap: 1.7rem;
+	
+}
+
+.header-logo li {
+	list-style: none;
+ 	color: white;	
+}
+.header-logo a {
+	
+	font-size: 1em;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
