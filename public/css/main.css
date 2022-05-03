@@ -726,6 +726,17 @@ img {
 	color: black;
 }
 
+.dropdown-header-container {
+    display: none;
+	background-color: tomato;
+	min-width: 100%;
+	
+}
+
+.dropdown-ul-container {
+    display: flex;
+    justify-content: center;
+}
 
 
 

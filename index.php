@@ -66,14 +66,12 @@ session_start();
             <h2> ALPHA </h2>
             <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul>
-		<li><a> Men </a></li>
+		<li><a onmouseover="displayDrop()"> Men </a></li>
 		<li><a> Women </a></li>
 		<li><a> Basketball </a></li>
 		<li><a> Boxing </a></li>
 		<li><a> Running </a></li>
 		<li><a> Gym </a></li>
-
-
 	   </ul>
         </div>
 
@@ -109,6 +107,22 @@ session_start();
         </div>
     </div>
     
+    <div class="dropdown-header-container" id="test">
+	<div class="dropdown-ul-container">
+		<ul>
+            <li><a href="">Running</a></li>
+             <li><a href="">Running</a></li>
+            <li><a href="">Running</a></li>
+            <li><a href="">Running</a></li>
+		</ul>
+        <ul>
+            <li><a href="">Running</a></li>
+            <li><a href="">Running</a></li>
+            <li><a href="">Running</a></li>
+
+        </ul>
+	</div>
+    </div>
 
     <main class="flex-column">
         <div class="image-banner-container flex">
