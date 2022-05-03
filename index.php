@@ -54,7 +54,7 @@ session_start();
             if(isset($_SESSION['username'])){
                 echo "<a href= scripts/logout.php> LOGOUT </a>";
             } else {
-                echo "LOGIN";
+                echo "Login";
             }
             ?>
         </a> </span>
