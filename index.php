@@ -67,12 +67,12 @@ session_start();
             <h2> ALPHA </h2>
             <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul class="category">
-		<li><a id="test"> Men </a></li>
-		<li><a id="test2"> Women </a></li>
-		<li><a id="test3"> Basketball </a></li>
-		<li><a id="boxing"> Boxing </a></li>
-		<li><a id="running"> Running </a></li>
-		<li><a id="test6"> Gym </a></li>
+		<li><a  class="test"> Men </a></li>
+		<li><a  class="test"> Women </a></li>
+		<li><a  class="test"> Basketball </a></li>
+		<li><a class="test"> Boxing </a></li>
+		<li><a  class="test"> Running </a></li>
+		<li><a  class="test"> Gym </a></li>
 	   </ul>
         </div>
 
@@ -112,7 +112,7 @@ session_start();
 	<div class="dropdown-ul-container">
 		<ul>
             <li><a href="" >SHOES</a></li>
-             <li><a href="">Basketball Shoes</a></li>
+             <li><a id="b">Basketball Shoes</a></li>
             <li><a href="">Boxing Shoes</a></li>
             <li><a href="">Bike Shoes</a></li>
             <li><a href="">Running Shoes</a></li>

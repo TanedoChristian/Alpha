@@ -1,26 +1,19 @@
 $(document).ready(function(){
-    $("#test").hover(function(){
+    var get = null;
+    $(".test").hover(function(){
         $("#dropdown").show();
-        console.log(this.text);
+        get = this.text;
     });
-    $("#test2").hover(function(){
-        $("#dropdown").show();
-        console.log(this.text);
-    });
-    $("#test3").hover(function(){
-        $("#dropdown").show();
-        console.log(this.text);
-    });
-
-    $("#boxing").hover(function(){
-        $("#dropdown").show();
-        console.log(this.text);
-    });
-    $("#running").hover(function(){
-        $("#dropdown").show();
-        console.log(this.text);
-    });
-  
+    $("#b").click(function(){
+        $.ajax({
+            type: 'POST',
+            url: 'view/product.php',
+            data: {gender: this.text, category: get},
+            success:function(data){
+                console.log(data);
+            }
+        })
+    })
 
 });
 

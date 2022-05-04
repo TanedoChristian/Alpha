@@ -765,9 +765,16 @@ img {
 
 }
 
+.category li a {
+    color: white;
+}
 
 
-
+.test {
+    
+    text-decoration: none;
+    color: white;
+}
 
 
 
