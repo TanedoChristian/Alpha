@@ -111,15 +111,16 @@ session_start();
     <div class="dropdown-header-container" id="dropdown" >
 	<div class="dropdown-ul-container">
 		<ul>
-            <li><a href="" >Running</a></li>
-             <li><a href="">Running</a></li>
-            <li><a href="">Running</a></li>
-            <li><a href="">Running</a></li>
+            <li><a href="" >SHOES</a></li>
+             <li><a href="">Basketball Shoes</a></li>
+            <li><a href="">Boxing Shoes</a></li>
+            <li><a href="">Bike Shoes</a></li>
+            <li><a href="">Running Shoes</a></li>
 		</ul>
         <ul>
-            <li><a href="">Running</a></li>
-            <li><a href="">Running</a></li>
-            <li><a href="">Running</a></li>
+            <li><a href="">CLOTHES</a></li>
+            <li><a href="">Basketball Clothes</a></li>
+            <li><a href="">Bike Apparel</a></li>
 
         </ul>
 	</div>
