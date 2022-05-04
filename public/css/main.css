@@ -738,13 +738,15 @@ img {
     justify-content: center;
 }
 
+.category li a {
+    
+    cursor: pointer;
+}
 
-
-
-
-
-
-
+.category li a:hover{
+    display: block;
+    background-color: black;
+}
 
 
 
