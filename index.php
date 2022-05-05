@@ -69,10 +69,8 @@ session_start();
 	    <ul class="category">
 		<li><a  class="test"> Men </a></li>
 		<li><a  class="test"> Women </a></li>
-		<li><a  class="test"> Basketball </a></li>
-		<li><a class="test"> Boxing </a></li>
-		<li><a  class="test"> Running </a></li>
-		<li><a  class="test"> Gym </a></li>
+        <li><a  class="test"> Gym Equipments </a></li>
+
 	   </ul>
         </div>
 
@@ -111,11 +109,11 @@ session_start();
     <div class="dropdown-header-container" id="dropdown" >
 	<div class="dropdown-ul-container">
 		<ul>
-            <li><a href="" >SHOES</a></li>
-             <li><a id="b">Basketball Shoes</a></li>
-            <li><a href="">Boxing Shoes</a></li>
-            <li><a href="">Bike Shoes</a></li>
-            <li><a href="">Running Shoes</a></li>
+            <li><a href="" class="main-dropdown">SHOES</a></li>
+             <li><a class="b">Basketball Shoes</a></li>
+            <li><a  class="b">Boxing Shoes</a></li>
+            <li><a  class="b">Bike Shoes</a></li>
+            <li><a  class="b">Running Shoes</a></li>
 		</ul>
         <ul>
             <li><a href="">CLOTHES</a></li>

@@ -4,13 +4,14 @@ $(document).ready(function(){
         $("#dropdown").show();
         get = this.text;
     });
-    $("#b").click(function(){
+    $(".b").click(function(){
         $.ajax({
             type: 'POST',
             url: 'view/product.php',
-            data: {gender: this.text, category: get},
+            data: {category: this.text, gender: get},
             success:function(data){
                 console.log(data);
+                window.location.href = "view/product.php";
             }
         })
     })

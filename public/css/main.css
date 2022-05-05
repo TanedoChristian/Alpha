@@ -748,6 +748,7 @@ img {
 
 .dropdown-ul-container li a {
     text-decoration: none;
+    cursor: pointer;
     color: var(--bg-black);
     letter-spacing: 2px;
 }
@@ -767,6 +768,7 @@ img {
 
 .category li a {
     color: white;
+    
 }
 
 
@@ -777,6 +779,40 @@ img {
 }
 
 
+.main-dropdown {
+    font-weight: bold;
+}
+
+
+
+main {
+    min-width: 100%;
+    gap: 5rem;
+}
+
+
+.product-header {
+    justify-content: center;
+    height: 15vh;
+    align-items: center;
+}
+
+
+.product-view-container {
+
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15rem;
+}
+
+
+
+
+.product-card {
+    height: 12rem;
+}
 
 
 
