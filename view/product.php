@@ -65,12 +65,11 @@
 
     <div class="navbar flex">
         <div class="header-logo flex">
-        <h2> ALPHA </h2>
-            <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
+        <!-- <h2> ALPHA </h2>
+            <span><i class="material-icons md-48 user-profile">fitness_center</i></span> -->
 	    <ul class="category">
-		<li><a  class="test"> Men </a></li>
-		<li><a  class="test"> Women </a></li>
-        <li><a  class="test"> Equipments </a></li>
+		<li><a  class="test" href="../index.php" class="home"> <i class="material-icons md-60 ">reply</i> </a></li>
+	
 
 	   </ul>
         </div>

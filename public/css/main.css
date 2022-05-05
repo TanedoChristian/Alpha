@@ -712,7 +712,7 @@ img {
 
 .header-logo ul {
 	display: flex;
-	gap: 1.7rem;
+	gap: 3rem;
 	
 }
 
@@ -846,8 +846,9 @@ main {
 
 
 
-
-
+.home {
+    font-size: 20px;
+}
 
 
 
