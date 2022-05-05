@@ -1,15 +1,8 @@
 <?php
-session_start(); 
 
 
 
 
-if(isset($_POST['category'])){
-
-     $_SESSION['category'] = $_POST['category'];
-     $_SESSION['gender'] = $_POST['gender'];
- 
- }
 
 
 
@@ -72,12 +65,12 @@ if(isset($_POST['category'])){
 
     <div class="navbar flex">
         <div class="header-logo flex">
-        <h2 class="view-login-h1"> <a href="../index.php"> ALPHA </a></h2>
+        <h2> ALPHA </h2>
             <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul class="category">
 		<li><a  class="test"> Men </a></li>
 		<li><a  class="test"> Women </a></li>
-        <li><a  class="test"> Gym Equipments </a></li>
+        <li><a  class="test"> Equipments </a></li>
 
 	   </ul>
         </div>
@@ -119,40 +112,45 @@ if(isset($_POST['category'])){
     <div class="product-header flex">
         <h1> 
                 <?php
-                    if(isset($_SESSION['gender'])){
-                        echo $_SESSION['category'] . "/" . $_SESSION['gender'];
-                    }
+
+                include_once '../scripts/product-model.php';
+
+                echo $title;
+             
                 ?>
 
         </h1>
     </div>
     <div class="product-view-container">
 
-               <div class="product-card">
-                    <img src="../public/img/Rectangle 4.png" alt="">
-                    <h3> Nike Escape 3 </h3>
-                    <p> Php 200.00 </p>
-                </div>    
-                <div class="product-card">
-                    <img src="../public/img/Rectangle 4.png" alt="">
-                    <h3> Nike Escape 3 </h3>
-                    <p> Php 200.00 </p>
-                </div>
-                <div class="product-card">
-                    <img src="../public/img/Rectangle 4.png" alt="">
-                    <h3> Nike Escape 3 </h3>
-                    <p> Php 200.00 </p>
-                </div>
-                <div class="product-card">
-                    <img src="../public/img/Rectangle 4.png" alt="">
-                    <h3> Nike Escape 3 </h3>
-                    <p> Php 200.00 </p>
-                </div>
-                <div class="product-card">
-                    <img src="../public/img/Rectangle 4.png" alt="">
-                    <h3> Nike Escape 3 </h3>
-                    <p> Php 200.00 </p>
-                </div>     
+                    <?php
+                        include_once '../scripts/product-model.php';
+
+        
+                        
+                        foreach($result as $r){
+                           
+                            $productName = $r['product_name'];
+                            $productPrice = $r['product_price'];
+                            $productImg = $r['product_img'];
+
+
+                            echo <<<HERE
+
+                            <div class="product-card">
+                            <img src="../public/img/product/$productImg" alt="">
+                            <div class="product-description">
+                            <h3> $productName </h3>
+                            <p> PHP $productPrice.00 </p>
+                            </div>
+                            </div>
+
+                            HERE;
+                        }
+                        
+
+                    ?>
+
 
 
     </div>

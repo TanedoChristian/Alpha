@@ -7,16 +7,25 @@ $(document).ready(function(){
     $(".b").click(function(){
         $.ajax({
             type: 'POST',
-            url: 'view/product.php',
+            url: 'scripts/product-model.php',
             data: {category: this.text, gender: get},
             success:function(data){
                 console.log(data);
                 window.location.href = "view/product.php";
             }
         })
+
+
     })
 
 });
+
+
+
+
+
+
+
 
 function hidedropdown(){
     $(document).ready(function(){

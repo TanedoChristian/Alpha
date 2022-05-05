@@ -721,17 +721,18 @@ img {
  	color: white;	
 }
 .header-logo a {
-	
+	cursor: pointer;
 	font-size: 1em;
 	color: black;
 }
 
 .dropdown-header-container {
     display: none;
-	background-color: white
-    border: 2px solid #e52b1b;
+    position: absolute;
+	background-color: white;
 	min-width: 100%;
-    opacity: 0.8;
+    
+    
 	
 }
 
@@ -739,6 +740,8 @@ img {
     display: flex;
     justify-content: center;
     gap: 10rem;
+    
+    
 }
 
 .dropdown-ul-container li {
@@ -788,23 +791,36 @@ img {
 main {
     min-width: 100%;
     gap: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .product-header {
     justify-content: center;
-    height: 15vh;
-    align-items: center;
+    height: 25vh;
+    align-items: flex-end;
+    
+  
+}
+
+.product-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8rem;
 }
 
 
 .product-view-container {
-
-    max-width: 100%;
+    
+    max-width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15rem;
+    text-align: center;
+    row-gap: 10rem;
+    column-gap: 5rem;
 }
 
 
@@ -812,12 +828,19 @@ main {
 
 .product-card {
     height: 12rem;
+
 }
 
 
+.product-card:hover {
+    transform: translate(0, -20px);
+    cursor: pointer;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 20px #e52b1b;
 
 
-
+}
 
 
 

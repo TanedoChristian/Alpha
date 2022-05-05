@@ -18,7 +18,7 @@ class Database {
     }
 
     public function createConnection(){
-        $this->connection = new PDO("mysql:hsost=$this->server;dbname=$this->database", $this->user, $this->password);
+        $this->connection = new PDO("mysql:host=$this->server;dbname=$this->database", $this->user, $this->password);
     }
 }
 
