@@ -801,7 +801,7 @@ main {
 .product-header {
     justify-content: center;
     height: 25vh;
-    align-items: flex-end;
+    align-items: flex-start;
     
   
 }
@@ -827,7 +827,7 @@ main {
 
 
 .product-card {
-    height: 12rem;
+    height: 18rem;
 
 }
 
@@ -855,6 +855,8 @@ main {
     text-decoration: none;
     
     color: black;
+    background-color: #e52b1b;
+    
 }
 
 
@@ -864,23 +866,130 @@ main {
 
 
 
+.header-logo a h2 {
+    text-decoration: none;
+}
+
+
+.product-review-container {
+    width: 100%;
+    align-items: center;
+    height: 50vh;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;    
+}
+
+.product-title-container {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    justify-content: space-around;
+}
+
+.product-image-review {
+    height: 20rem;
+    
+}
+
+.red {
+    color: #e52b1b;
+}
+
+.product-review-comment {
+
+    width: 80%;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.comment-section {
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.buy-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e52b1b;
+    color: white;
+}
+
+
+.commentS {
+    display: flex;
+    justify-content: center;
+}
+
+
+.buy-container {
+    display: flex;
+    gap: 2rem;
+}
 
 
 
 
+.view {
+  
+    color: white;
+
+}
+
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 5px solid red;
+}
+
+.form-comment-container {
+   
+    margin-top: 10rem;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
 
 
 
+.form-comment {
+    display: flex;
+    height: 40%;
+    gap: 1rem;
+    width: 50%;
+    justify-content: center;
+}
+
+.form-comment input {
+    padding: 12px 50px;
+}
+
+.form-comment input[type="text"] {
+    padding: 30px 10rem;
+    outline: none;
+
+}
 
 
+.form-comment input[type="submit"]{
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
 
 
+.Bebas {
+    font-family: 'Bebas Neue', sans-serif;
+}
 
-
-
-
-
-
-
-
-
+.Roboto {
+    font-family: 'Inter', sans-serif;
+}

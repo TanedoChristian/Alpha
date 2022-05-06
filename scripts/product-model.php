@@ -51,6 +51,30 @@ $title = $tagName . " /" . $category;
 
 
 
+function getTitle($product,$tag){
+    $database = new Database;
+    $connection = $database->getConnection();
+
+    $statement = $connection->prepare("SELECT * from product where product_category =:productName and product_tag=:tag");
+    $statement->bindParam(":productName", $product, PDO::PARAM_STR);
+    $statement->bindParam(":tag", $tag, PDO::PARAM_STR);
+    $statement->execute();
+
+    $result = $statement->fetchAll();
+    
+    foreach($result as $r){
+        $title = $r['product_tag'] . " > " . $r['product_category'];
+        return $title;
+    }
+}
+
+
+$trail = getTitle($category, $tagName);
+
+
+
+
+
 
 
 

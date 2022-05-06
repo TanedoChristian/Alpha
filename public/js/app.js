@@ -20,10 +20,26 @@ $(document).ready(function(){
 
     })
 
+   
+
 });
 
+$(".tag-product").click(function(){
+
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost/Alpha/view/review-product.php',
+        data: {product: this.text},
+        success:function(data){
+            console.log(data);
+            window.location.href = "http://localhost/Alpha/view/review-product.php"
+        }
+    });
+})
 
 
+
+    
 
 
 

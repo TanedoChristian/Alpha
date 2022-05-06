@@ -36,7 +36,7 @@ session_start();
     
     <div class="header flex" id="home-section">
         <div class="login-container flex">
-            <span class="signup"><a href="view/signup.php"> 
+            <span class="signup"><a href="http://localhost/Alpha/view/signup.php"> 
             <?php
             
             if(isset($_SESSION['username'])){
@@ -48,7 +48,7 @@ session_start();
 
             </a> </span>
             <div class="line"></div>
-            <span class="login"><a href="view/login.php"> 
+            <span class="login"><a href="http://localhost/Alpha/view/login.php"> 
             
             <?php
             

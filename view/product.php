@@ -49,12 +49,12 @@
 
             </a> </span>
             <div class="line"></div>
-            <span class="login"><a href="view/login.php"> 
+            <span class="login"><a href="http://localhost/Alpha/view/login.php"> 
             
             <?php
             
             if(isset($_SESSION['username'])){
-                echo "<a href= ../scripts/logout.php> LOGOUT </a>";
+                echo "<a href= http://localhost/Alpha/view/logout.php> LOGOUT </a>";
             } else {
                 echo "Login";
             }
@@ -65,7 +65,7 @@
 
     <div class="navbar flex">
         <div class="header-logo flex">
-            <h2> ALPHA </h2>
+           <a href="http://localhost/Alpha/index.php"> <h2> ALPHA </h2></a>
             <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul class="category">
 		<li><a  class="test"> Men </a></li>
@@ -107,7 +107,7 @@
         </div>
     </div>
     
-    <div class="dropdown-header-container" id="dropdown" >
+    <div class="dropdown-header-container" id="dropdown" ">
 	<div class="dropdown-ul-container">
         
         <ul>
@@ -133,9 +133,15 @@
 	</div>
     </div>
 
+<?php
+    include_once "../scripts/product-model.php";
+  
 
+?>
 <main>
-    <div class="product-header flex">
+    <p> 
+   
+    <div class="product-header flex" onmouseover="hidedropdown()">
         <h1> 
                 <?php
 
@@ -155,29 +161,36 @@
         
                         
                         foreach($result as $r){
-                           
+                            
                             $productName = $r['product_name'];
                             $productPrice = $r['product_price'];
                             $productImg = $r['product_img'];
-                            
+                            $test = $productName;
+                            $productId = $r['product_id'];
+
+                
                             $src = str_replace(' ', '-', $productName);
 
                             echo <<<HERE
-
-                            <div class="product-card">
+                            
+                            <div class="product-card" id="card">
                             <img src="../public/img/product/$productImg" alt="">
-                            <a href="$src.php" class="tag-product"> View Me </a>
+                            
                             <div class="product-description">
-                            <h3> $productName </h3>
-                            <p> PHP $productPrice.00 </p>
+                            <a class="tag-product"> <h3 class="product-name"> $test </h3></a>
+                            <p class=""> PHP $productPrice.00 </p>
+                   
+                       
                             </div>
                             </div>
 
                             HERE;
                         }
+                       
                         
 
                     ?>
+                    
 
 
 
