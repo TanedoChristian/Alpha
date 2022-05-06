@@ -117,8 +117,9 @@ session_start();
 
 		<ul>
             <li><a href="" class="main-dropdown">Apparel</a></li>
-             <li><a class="b">Basketball Shoes</a></li>
             <li><a  class="b">Bicycle</a></li>
+             <li><a class="b">Basketball Jersey</a></li>
+            
 		</ul>
         <ul>
             <li><a href="" class="main-dropdown">Equipments</a></li>

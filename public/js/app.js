@@ -5,16 +5,18 @@ $(document).ready(function(){
         get = this.text;
     });
     $(".b").click(function(){
+        var t = this.text;
         $.ajax({
             type: 'POST',
-            url: 'scripts/product-model.php',
+            url: 'http://localhost/Alpha/scripts/product-model.php',
             data: {category: this.text, gender: get},
             success:function(data){
-                console.log(data);
-                window.location.href = "view/product.php";
+                console.log(get.trim() + " " +t.trim());               
+                window.location.href = "http://localhost/Alpha/view/product.php";
             }
+           
         })
-
+        
 
     })
 

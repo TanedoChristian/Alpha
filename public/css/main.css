@@ -851,7 +851,11 @@ main {
 }
 
 
-
+.tag-product {
+    text-decoration: none;
+    
+    color: black;
+}
 
 
 

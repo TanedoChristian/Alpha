@@ -19,19 +19,14 @@ if(isset($_POST['category'])){
 
 }
 
-
-
 $tagName = trim($_SESSION['gender']);
-
 
 
 if($_SESSION['category'] == "Basketball Shoes"){
     $category = "BasketballShoes";
 }
 
-
 $category = trim($_SESSION['category']);
-
 
 
 
@@ -51,8 +46,6 @@ $statement->execute();
 
 
 $result = $statement->fetchAll();
-
-
 
 $title = $tagName . " /" . $category;
 

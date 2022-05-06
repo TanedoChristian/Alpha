@@ -65,11 +65,12 @@
 
     <div class="navbar flex">
         <div class="header-logo flex">
-        <!-- <h2> ALPHA </h2>
-            <span><i class="material-icons md-48 user-profile">fitness_center</i></span> -->
+            <h2> ALPHA </h2>
+            <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul class="category">
-		<li><a  class="test" href="../index.php" class="home"> <i class="material-icons md-60 ">reply</i> </a></li>
-	
+		<li><a  class="test"> Men </a></li>
+		<li><a  class="test"> Women </a></li>
+        <li><a  class="test"> Equipments </a></li>
 
 	   </ul>
         </div>
@@ -105,6 +106,32 @@
             </i></span>
         </div>
     </div>
+    
+    <div class="dropdown-header-container" id="dropdown" >
+	<div class="dropdown-ul-container">
+        
+        <ul>
+            <li><a href="" class="main-dropdown">Shoes</a></li>
+             <li><a class="b">Basketball</a></li>
+            
+		</ul>
+
+		<ul>
+            <li><a href="" class="main-dropdown">Apparel</a></li>
+            <li><a  class="b">Bicycle</a></li>
+             <li><a class="b">Basketball Jersey</a></li>
+            
+		</ul>
+        <ul>
+            <li><a href="" class="main-dropdown">Equipments</a></li>
+            <li><a class="b">Bicycle </a></li>
+        </ul>
+        
+        
+
+
+	</div>
+    </div>
 
 
 <main>
@@ -132,12 +159,14 @@
                             $productName = $r['product_name'];
                             $productPrice = $r['product_price'];
                             $productImg = $r['product_img'];
-
+                            
+                            $src = str_replace(' ', '-', $productName);
 
                             echo <<<HERE
 
                             <div class="product-card">
                             <img src="../public/img/product/$productImg" alt="">
+                            <a href="$src.php" class="tag-product"> View Me </a>
                             <div class="product-description">
                             <h3> $productName </h3>
                             <p> PHP $productPrice.00 </p>
