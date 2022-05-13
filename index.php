@@ -61,7 +61,6 @@ session_start();
         </a> </span>
         </div>
     </div>
-
     <div class="navbar flex">
         <div class="header-logo flex">
             <h2> ALPHA </h2>
@@ -86,7 +85,7 @@ session_start();
             <span><i class="material-icons md-48 user-profile">
             <?php
             if(isset($_SESSION['username'])){
-                echo "<p>" . $_SESSION['username'] . '</p>';
+                echo "<p class=upper>" . strtoupper($_SESSION['username']) . '</p>';
             } else {
                 echo "account_circle";
             }

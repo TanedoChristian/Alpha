@@ -7,6 +7,7 @@ include '../database/database.php';
 
     if(isset($_POST['product'])){
         $_SESSION['product'] = $_POST['product'];
+      
     }
 
     
@@ -104,6 +105,7 @@ $statement->execute();
 
 
 
+
 ?>
 
 
@@ -165,7 +167,7 @@ $statement->execute();
 
     <div class="navbar flex">
         <div class="header-logo flex">
-            <h2> ALPHA </h2>
+        <a href="http://localhost/Alpha/index.php"> <h2> ALPHA </h2></a>
             <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul class="category">
 		<li><a  class="test"> Men </a></li>
@@ -187,7 +189,7 @@ $statement->execute();
             <span><i class="material-icons md-48 user-profile">
             <?php
             if(isset($_SESSION['username'])){
-                echo "<p>" . $_SESSION['username'] . '</p>';
+                echo "<p class=upper>" .strtoupper($_SESSION['username']) . '</p>';
             } else {
                 echo "account_circle";
             }
@@ -234,10 +236,15 @@ $statement->execute();
         <section onmouseover="hidedropdown()">
             <?php echo" <p> $title </p>" ?>
             <div class="product-review-container">
+
             <?php
             ECHO <<<HERE
      
             <div class="product-image-review">
+            <div class=sub-img>
+            
+            </div>
+                
                 <img src="../public/img/product/$productImage" alt="">
             </div>
             <div class="product-title-container">
@@ -266,11 +273,12 @@ $statement->execute();
                 <div>
                 <h1 class="Bebas"> Product Ratings </h1>
                 <h3> Comment </h3>
+                
+
                 </div>  
                 <div class="comment-section">
                 <?php
                     
-               
                     foreach($result as $r){
                         ECHO <<<HERE
                             
@@ -287,6 +295,7 @@ $statement->execute();
                             
                         HERE;
                     }
+                
                 ?>
                      </div>
             </div>

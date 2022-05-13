@@ -77,5 +77,4 @@ $trail = getTitle($category, $tagName);
 
 
 
-
 ?>

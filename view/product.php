@@ -37,7 +37,7 @@
     
     <div class="header flex" id="home-section">
         <div class="login-container flex">
-            <span class="signup"><a href="view/signup.php"> 
+            <span class="signup"><a href="http://localhost/Alpha/view/signup.php"> 
             <?php
             
             if(isset($_SESSION['username'])){
@@ -87,7 +87,7 @@
             <span><i class="material-icons md-48 user-profile">
             <?php
             if(isset($_SESSION['username'])){
-                echo "<p>" . $_SESSION['username'] . '</p>';
+                echo "<p class=upper>" . strtoupper($_SESSION['username']) . '</p>';
             } else {
                 echo "account_circle";
             }
@@ -178,7 +178,7 @@
                             
                             <div class="product-description">
                             <a class="tag-product"> <h3 class="product-name"> $test </h3></a>
-                            <p class=""> PHP $productPrice.00 </p>
+                            <p class="red"> PHP $productPrice.00 </p>
                    
                        
                             </div>

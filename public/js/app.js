@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var get = null;
     $(".test").hover(function(){
-        $("#dropdown").show();
+        $("#dropdown").slideDown("slow");
         get = this.text;
     });
     $(".b").click(function(){
@@ -37,9 +37,6 @@ $(".tag-product").click(function(){
     });
 })
 
-
-
-    
 
 
 

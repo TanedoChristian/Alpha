@@ -463,6 +463,7 @@ Login
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
 
@@ -489,7 +490,7 @@ Login
     width: 60%;
     border-radius: 3px;
     border: 1px solid #bbb;
-    padding: 12px;
+    padding: 10px;
     
 }
 
@@ -889,11 +890,17 @@ main {
 
 .product-image-review {
     height: 20rem;
-    
+    display: flex;
+    gap: 2rem;
+}
+
+.side {
+    height: 5rem;
 }
 
 .red {
     color: #e52b1b;
+    font-weight: bold;
 }
 
 .product-review-comment {
@@ -992,4 +999,25 @@ main {
 
 .Roboto {
     font-family: 'Inter', sans-serif;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.sub-img {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.hello {
+    border: 2px solid red;
+    height: 20vh;
+}
+
+
+.g {
+    display: none;
 }

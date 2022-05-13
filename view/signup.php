@@ -74,6 +74,7 @@ include '../scripts/validate-signup.php';
 
   <div class="error-container">
   <?php
+  /*
         if(isset($_SESSION['alpha_password']))
         {
             echo $_SESSION['alpha_password'] ."<br>";
@@ -85,7 +86,11 @@ include '../scripts/validate-signup.php';
         if(isset($_SESSION['length_password']))
         {
             echo $_SESSION['length_password'];
-        }
+        }*/
+
+        echo "Password and confirm password must be match<br>";
+        echo"Password must contain alpha numeric<br>";
+        echo "Password must contain 8 characters or more";
         
 
         session_destroy();
