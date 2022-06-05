@@ -59,7 +59,7 @@ $buyer = trim($_SESSION['username']);
             <?php
             
             if(isset($_SESSION['username'])){
-                echo "<a href= scripts/logout.php> LOGOUT </a>";
+                echo "<a href= ../scripts/logout.php> LOGOUT </a>";
             } else {
                 echo "Login";
             }
@@ -145,7 +145,7 @@ $buyer = trim($_SESSION['username']);
       <div class="col">
         <p><span class="h2">My Shopping Cart </span>
         <?php
-
+            
             $user = new User;
             $result = $user->getAddToCart($buyer);
             $totalPrice = $user->getTotalPrice($buyer);

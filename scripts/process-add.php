@@ -8,11 +8,13 @@ $buyer = trim($_SESSION['username']);
 
 $user = new User;
 
-    if(isset($_REQUEST['add-to-cart'])){
+    if(isset($_REQUEST['add-to-cart']) && isset($_SESSION['username'])){
         $add =  trim($_REQUEST['add-to-cart']);
         $user->setAddToCart($add, $buyer);
         header('location: ../view/add-to-cart.php');
-}
+    } else {
+        header('location: ../view/review-product.php');
+    }
 
 
 

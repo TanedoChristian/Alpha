@@ -4,6 +4,8 @@
 
 include '../templates/header.php';
 
+
+
 ?>
 
 
@@ -32,7 +34,8 @@ include '../templates/header.php';
                 </div>
                 <div class="buy-container">
                 <span>
-                <a href="http://localhost/Alpha/scripts/process-add.php?add-to-cart=$product"> 
+    
+                <a href="http://localhost/Alpha/scripts/process-add.php?add-to-cart=$product" disabled> 
                 <i class="material-icons md-48 red">
                     shopping_cart
                 </i>
