@@ -1,10 +1,107 @@
-<?php
+<?php 
+
+session_start();
+
+include '../database/database.php';
+
+
+    if(isset($_POST['product'])){
+        $_SESSION['product'] = $_POST['product'];
+      
+    }
+
+    
+    $product = trim($_SESSION['product']);
+    
+
+
+
+if(isset($_POST['submit'])){
+
+    $username = trim($_SESSION['username']);    
+    $comment = $_POST['comment'];
+
+    $database = new Database;
+    $connection = $database->getConnection();
+
+
+    $statement = $connection->prepare('INSERT INTO comment (username,comment,product_name) values(:username, :comment, :product_name)');
+    $statement->bindParam(":username", $username, PDO::PARAM_STR);
+    $statement->bindParam(":comment", $comment, PDO::PARAM_STR);
+    $statement->bindParam(":product_name", $product, PDO::PARAM_STR);
+
+    $statement->execute();
+    
+}
+
+
+
+function getImg($product){
+    $database = new Database;
+    $connection = $database->getConnection();
+
+    $statement = $connection->prepare("SELECT * from product where product_name =:productName");
+    $statement->bindParam(":productName", $product, PDO::PARAM_STR);
+    $statement->execute();
+
+    $result = $statement->fetchAll();
+    
+    foreach($result as $r){
+        return $r['product_img'];
+    }
+
+}
+
+
+function getTitle($product){
+    $database = new Database;
+    $connection = $database->getConnection();
+
+    $statement = $connection->prepare("SELECT * from product where product_name =:productName");
+    $statement->bindParam(":productName", $product, PDO::PARAM_STR);
+    $statement->execute();
+
+    $result = $statement->fetchAll();
+    
+    foreach($result as $r){
+        $title = $r['product_tag'] . " > " . $r['product_category'] . " > " . $r['product_name'];
+        return $title;
+    }
+}
+
+function getPrice($product){
+    $database = new Database;
+    $connection = $database->getConnection();
+
+    $statement = $connection->prepare("SELECT * from product where product_name =:productName");
+    $statement->bindParam(":productName", $product, PDO::PARAM_STR);
+    $statement->execute();
+
+    $result = $statement->fetchAll();
+    
+    foreach($result as $r){
+        $title = $r['product_price'];
+        return $title;
+    }
+}
 
 
 
 
+$productImage = getImg($product);
+$title = getTitle($product);
+$productPrice = getPrice($product);
 
 
+
+$database = new Database;
+$connection = $database->getConnection();
+
+$statement = $connection->prepare('SELECT * from comment where product_name =:product');
+$statement->bindParam(":product", $product);
+$statement->execute();
+
+ $result = $statement->fetchAll();
 
 ?>
 
@@ -54,7 +151,7 @@
             <?php
             
             if(isset($_SESSION['username'])){
-                echo "<a href= http://localhost/Alpha/view/logout.php> LOGOUT </a>";
+                echo "<a href= http://localhost/Alpha/scripts/logout.php> LOGOUT </a>";
             } else {
                 echo "Login";
             }
@@ -63,9 +160,10 @@
         </div>
     </div>
 
+
     <div class="navbar flex">
         <div class="header-logo flex">
-           <a href="http://localhost/Alpha/index.php"> <h2> ALPHA </h2></a>
+            <h2> <a href="http://localhost/Alpha/index.php" class="alpha-logo"> Alpha </a> </h2>
             <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul class="category">
 		<li><a  class="test"> Men </a></li>
@@ -107,7 +205,7 @@
         </div>
     </div>
     
-    <div class="dropdown-header-container" id="dropdown" ">
+    <div class="dropdown-header-container" id="dropdown" >
 	<div class="dropdown-ul-container">
         
         <ul>
@@ -124,76 +222,9 @@
 		</ul>
         <ul>
             <li><a href="" class="main-dropdown">Equipments</a></li>
-            
             <li><a class="b">Bicycle </a></li>
+            
         </ul>
-        
-        
-
-
-	</div>
-    </div>
-
-<?php
-    include_once "../scripts/product-model.php";
-  
-
-?>
-<main>
-    <p> 
-   
-    <div class="product-header flex" onmouseover="hidedropdown()">
-        <h1> 
-                <?php
-
-                include_once '../scripts/product-model.php';
-
-                echo $title;
-             
-                ?>
-
-        </h1>
-    </div>
-    <div class="product-view-container">
-
-                    <?php
-                        include_once '../scripts/product-model.php';
-
-        
-                        
-                        foreach($result as $r){
-                            
-                            $productName = $r['product_name'];
-                            $productPrice = $r['product_price'];
-                            $productImg = $r['product_img'];
-                            $test = $productName;
-                            $productId = $r['product_id'];
-
-                
-                            $src = str_replace(' ', '-', $productName);
-
-                            echo <<<HERE
-                            
-                            <div class="product-card" id="card">
-                            <img src="../public/img/product/$productImg" alt="">
-                            
-                            <div class="product-description">
-                            <a class="tag-product"> <h3 class="product-name"> $test </h3></a>
-                            <p class="red"> PHP $productPrice.00 </p>
-                   
-                       
-                            </div>
-                            </div>
-
-                            HERE;
-                        }
-                       
-                        
-
-                    ?>
-                    
-
-
 
     </div>
-</main>
+    </div>

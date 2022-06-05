@@ -1,12 +1,17 @@
 <?php
 
+include '../model/User.php';
+
+session_start();
 
 
 
 
+$buyer = trim($_SESSION['username']);
 
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +59,7 @@
             <?php
             
             if(isset($_SESSION['username'])){
-                echo "<a href= http://localhost/Alpha/view/logout.php> LOGOUT </a>";
+                echo "<a href= scripts/logout.php> LOGOUT </a>";
             } else {
                 echo "Login";
             }
@@ -62,10 +67,9 @@
         </a> </span>
         </div>
     </div>
-
     <div class="navbar flex">
         <div class="header-logo flex">
-           <a href="http://localhost/Alpha/index.php"> <h2> ALPHA </h2></a>
+        <a href="http://localhost/Alpha/index.php"> <h2> ALPHA </h2></a>
             <span><i class="material-icons md-48 user-profile">fitness_center</i></span>
 	    <ul class="category">
 		<li><a  class="test"> Men </a></li>
@@ -107,7 +111,7 @@
         </div>
     </div>
     
-    <div class="dropdown-header-container" id="dropdown" ">
+    <div class="dropdown-header-container" id="dropdown" >
 	<div class="dropdown-ul-container">
         
         <ul>
@@ -124,7 +128,6 @@
 		</ul>
         <ul>
             <li><a href="" class="main-dropdown">Equipments</a></li>
-            
             <li><a class="b">Bicycle </a></li>
         </ul>
         
@@ -134,66 +137,99 @@
 	</div>
     </div>
 
-<?php
-    include_once "../scripts/product-model.php";
-  
 
-?>
-<main>
-    <p> 
-   
-    <div class="product-header flex" onmouseover="hidedropdown()">
-        <h1> 
-                <?php
 
-                include_once '../scripts/product-model.php';
+  <section class="vh-100">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <p><span class="h2">My Shopping Cart </span>
+        <?php
 
-                echo $title;
-             
+            $user = new User;
+            $result = $user->getAddToCart($buyer);
+            $totalPrice = $user->getTotalPrice($buyer);
+
+          
+            foreach($result as $r){
+                
+                echo <<<HERE
+
+
+                <div class="card mb-4" style ="">
+                <div class="card-body p-4">
+
+                    <div class="row align-items-center">
+                    <div class="col-md-2">
+                        <img src="../public/img/product/$r[product_img]"
+                        class="img-fluid" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                        <p class="small mb-4 pb-2 font-weight-bold" style="font-weight:bold;">Name</p>
+                        <p class="lead fw-normal mb-0">$r[product_name]</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                        <p class="small mb-4 pb-2" style="font-weight:bold;">Quantity</p>
+                    
+                        <p class="lead fw-normal mb-0">$r[count]</p>
+                        
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                        <p class="small mb-4 pb-2" style="font-weight:bold;">Price</p>
+                        <p class="lead fw-normal mb-0">PHP $r[product_price]</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                        <p class="small mb-4 pb-2" style="font-weight:bold;">Total</p>
+                        <p class="lead fw-normal mb-0">PHP  $r[price]</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center">
+                        <div>
+                        <p class="small mb-4 pb-2" style="font-weight:bold;">Action </p>
+                        <a href="http://localhost/Alpha/scripts/minus-cart.php?product=$r[id]" class="btn btn-danger btn-cart">- </a>
+                        <a href="http://localhost/Alpha/scripts/add-cart.php?product=$r[product_name]" class="btn btn-danger btn-cart">+ </a>
+                        <a href='http://localhost/Alpha/scripts/process-remove.php?product=$r[product_name]' class="btn btn-danger btn-cart">Remove</a>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+                HERE;
+            }
                 ?>
 
-        </h1>
-    </div>
-    <div class="product-view-container">
+                <div class="card mb-5">
+                <div class="card-body p-4">
 
-                    <?php
-                        include_once '../scripts/product-model.php';
+                    <div class="float-end">
+                    <p class="mb-0 me-5 d-flex align-items-center">
+                        <span class="small text-muted me-2">Order total:</span> <span
+                        class="lead fw-normal">PHP <?php echo $totalPrice['total'] ?></span>
+                    </p>
+                    </div>
 
-        
-                        
-                        foreach($result as $r){
-                            
-                            $productName = $r['product_name'];
-                            $productPrice = $r['product_price'];
-                            $productImg = $r['product_img'];
-                            $test = $productName;
-                            $productId = $r['product_id'];
+                </div>
+                </div>
 
-                
-                            $src = str_replace(' ', '-', $productName);
+                <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-light btn-lg me-2 bg-danger" style="color:white">Check Out</button>
+                </div>
 
-                            echo <<<HERE
-                            
-                            <div class="product-card" id="card">
-                            <img src="../public/img/product/$productImg" alt="">
-                            
-                            <div class="product-description">
-                            <a class="tag-product"> <h3 class="product-name"> $test </h3></a>
-                            <p class="red"> PHP $productPrice.00 </p>
-                   
-                       
-                            </div>
-                            </div>
-
-                            HERE;
-                        }
-                       
-                        
-
-                    ?>
-                    
+            </div>
+            </div>
+        </div>
+        </section>
 
 
-
-    </div>
-</main>

@@ -1,0 +1,33 @@
+    <div class="add-to-cart-wrapper">
+<?php
+    
+    
+    $user = new User;
+
+
+    $result = $user->getAddToCart($buyer);
+ 
+    foreach($result as $r){
+
+        echo <<<HERE
+        
+            <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="../public/img/product/$r[product_img]" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">$r[product_name]</h5>
+            <p class="card-text">PHP $r[product_price]</p>
+            <p class="card-text">Quantity: $r[count]</p>
+            <a href="http://localhost/Alpha/scripts/minus-cart.php?product=$r[id]" class="btn btn-danger btn-cart">- </a>
+            <a href="http://localhost/Alpha/scripts/add-cart.php?product=$r[product_name]" class="btn btn-danger btn-cart">+ </a>
+            <a href='http://localhost/Alpha/scripts/process-remove.php?product=$r[product_name]' class="btn btn-danger btn-cart">Remove Product</a>
+            </div>
+        </div>
+
+        HERE;
+
+    }
+
+
+?>
+
+</div>

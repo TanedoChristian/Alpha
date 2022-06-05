@@ -702,6 +702,8 @@ img {
     text-decoration: none;
 }
 
+
+
 .login-btn:hover {
     color: white;
 }
@@ -724,7 +726,7 @@ img {
 .header-logo a {
 	cursor: pointer;
 	font-size: 1em;
-	color: black;
+	color: white;
 }
 
 .dropdown-header-container {
@@ -843,8 +845,9 @@ main {
 
 }
 
-
-
+a {
+    text-decoration: none;
+}
 
 
 .home {
@@ -861,15 +864,25 @@ main {
 }
 
 
-
-
-
-
-
-
-.header-logo a h2 {
-    text-decoration: none;
+.add-to-cart-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: center;
 }
+
+
+.btn {
+    border: 2px solid red;
+}
+
+
+.alpha-logo {
+    color: white;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 
 
 .product-review-container {
@@ -1021,3 +1034,5 @@ main {
 .g {
     display: none;
 }
+
+

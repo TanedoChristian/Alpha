@@ -96,7 +96,15 @@ session_start();
             <span><i class="material-icons md-48">
             <?php
             if(isset($_SESSION['username'])){
-                echo "shopping_cart";
+                echo <<< HERE
+                <span>
+                <a href="http://localhost/Alpha/view/add-to-cart.php?add-to-cart"> 
+                <i class="material-icons md-48 white">
+                    shopping_cart
+                </i>
+                </a>
+                </span>
+                HERE;
             } else {
                 echo "";
             }
@@ -264,6 +272,9 @@ session_start();
         </div>
       </div>
 </footer>
+
+
+
 
 
 

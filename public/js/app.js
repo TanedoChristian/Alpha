@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var get = null;
     $(".test").hover(function(){
-        $("#dropdown").slideDown("slow");
+        $("#dropdown").slideDown("fast");
         get = this.text;
     });
     $(".b").click(function(){
