@@ -24,7 +24,6 @@ include '../templates/header.php';
             <div class=sub-img>
             
             </div>
-                
                 <img src="../public/img/product/$productImage" alt="">
             </div>
             <div class="product-title-container">
@@ -36,6 +35,7 @@ include '../templates/header.php';
                 <span>
     
                 <a href="http://localhost/Alpha/scripts/process-add.php?add-to-cart=$product" disabled> 
+              
                 <i class="material-icons md-48 red">
                     shopping_cart
                 </i>
@@ -102,7 +102,7 @@ include '../templates/header.php';
         <form action="" method="POST" class="form-comment">
                 
         <input type="text" name="comment" placeholder="Add Comment">
-        <input type="submit" value="Comment" name="submit">
+        <input type="submit" value="Comment" name="submit" style="background-color: #e52b1b;">
 
         </form>
         </div>

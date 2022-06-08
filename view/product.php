@@ -143,7 +143,7 @@
     <p> 
    
     <div class="product-header flex" onmouseover="hidedropdown()">
-        <h1> 
+        <h1 class="product-title-h1"> 
                 <?php
 
                 include_once '../scripts/product-model.php';
@@ -175,7 +175,7 @@
                             echo <<<HERE
                             
                             <div class="product-card" id="card">
-                            <img src="../public/img/product/$productImg" alt="">
+                            <a href="#"><img src="../public/img/product/$productImg" alt=""></a>
                             
                             <div class="product-description">
                             <a class="tag-product"> <h3 class="product-name"> $test </h3></a>

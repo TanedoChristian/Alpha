@@ -64,7 +64,7 @@ function getTitle($product){
     $result = $statement->fetchAll();
     
     foreach($result as $r){
-        $title = $r['product_tag'] . " > " . $r['product_category'] . " > " . $r['product_name'];
+        $title = $r['product_tag'] . " / " . $r['product_category'] . " / " . $r['product_name'];
         return $title;
     }
 }

@@ -139,11 +139,11 @@ $buyer = trim($_SESSION['username']);
 
 
 
-  <section class="vh-100">
+  <section class="">
   <div class="container h-50">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">
-        <p><span class="h2">My Shopping Cart </span>
+        <p><span class="h2">CHECKOUT </span>
         <?php
             
             $user = new User;
@@ -224,13 +224,13 @@ $buyer = trim($_SESSION['username']);
               <label for="PaymentAmount">Customer Name</label>
               <div class="amount-placeholder">
     
-                  <span><?php echo $customer['firstname'] .' '. $customer['lastname']; ?></span>
+                  <span style="font-weight: bold;"><?php echo $customer['firstname'] .' '. $customer['lastname']; ?></span>
               </div>
           </div>
           <div class="form-group">
               <label for="PaymentAmount">Address</label>
               <div class="amount-placeholder">
-                  <span><?php echo $customer['address']?></span>
+                  <span style="font-weight: bold;"><?php echo $customer['address']?></span>
               </div>
           </div>
       

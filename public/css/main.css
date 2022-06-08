@@ -793,25 +793,35 @@ img {
 
 main {
     min-width: 100%;
-    gap: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
 
 .product-header {
     justify-content: center;
     height: 25vh;
-    align-items: flex-start;
-    
+    align-items: center;
+    width: 100%;
+   
   
+  
+}
+
+
+
+
+.product-description {
+  
+    text-align: left;
 }
 
 .product-header h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 8rem;
+    font-size: 4rem;
 }
 
 
@@ -820,17 +830,21 @@ main {
     max-width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     text-align: center;
-    row-gap: 10rem;
-    column-gap: 5rem;
+    row-gap: 15rem;
+    column-gap: 6rem;
+    justify-content: center;
+  
+   
+}
+
+.product-name {
+    font-size: 20px;
 }
 
 
-
-
 .product-card {
-    height: 18rem;
+    height: 10rem;
 
 }
 
@@ -887,19 +901,25 @@ a {
 
 .product-review-container {
     width: 100%;
-    align-items: center;
-    height: 50vh;
+    height: 60vh;
     display: flex;
-    gap: 10rem;
-    justify-content: center;    
+    gap: 7rem;
+    justify-content: center; 
+  
+   
 }
 
 .product-title-container {
     display: flex;
     flex-direction: column;
-    height: 15rem;
+    height: 20rem;
     justify-content: space-around;
+    
+
 }
+
+
+
 
 .product-image-review {
     height: 20rem;
@@ -921,6 +941,7 @@ a {
     width: 80%;
     flex-direction: column;
     gap: 5rem;
+    margin-top: 5%;
 }
 
 .comment-section {
@@ -948,7 +969,8 @@ a {
 
 .buy-container {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
+    
 }
 
 
@@ -1115,16 +1137,18 @@ body {
     z-index: 100001;
     background: ;
     width: 50%;
-    min-width: 300px;
+    min-width: 100%;
     height: 100%;
     min-height: 100%;
     background: 0 0 #ffffff;
     border-radius: 8px;
     border: 1px solid #dedede;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     display: block;
   }
+
+  
   
   #Checkout>h1 {
     margin: 0;
@@ -1189,6 +1213,10 @@ body {
   .card-row {
     text-align: center;
     margin: 20px 25px 10px;
+  }
+
+  .card-body {
+      border: 3px solid red;
   }
   
   .card-row span {
@@ -1260,5 +1288,5 @@ body {
   }
 
   .inline {
-        color: red;
+        color: black;
   }
