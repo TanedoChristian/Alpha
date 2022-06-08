@@ -193,7 +193,7 @@ $statement->execute();
              
              ?>
              </i></span>
-            <span><i class="material-icons md-48">
+            <span><a href="../view/add-to-cart.php"> <i class="material-icons md-48">
             <?php
             if(isset($_SESSION['username'])){
                 echo "shopping_cart";
@@ -201,6 +201,7 @@ $statement->execute();
                 echo "";
             }
             ?>
+            </a>
             </i></span>
         </div>
     </div>

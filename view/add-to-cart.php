@@ -224,7 +224,7 @@ $buyer = trim($_SESSION['username']);
                 </div>
 
                 <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-light btn-lg me-2 bg-danger" style="color:white">Check Out</button>
+                <button type="button" class="btn btn-light btn-lg me-2 bg-danger" style="color:white"><a href="checkout.php">Check Out</a> </button>
                 </div>
 
             </div>

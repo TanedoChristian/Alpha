@@ -73,6 +73,17 @@ class User {
         return $result;
     }
 
+    public function getCustomerInfor($buyer){
+        $sql = "SELECT * from register where username =:b";
+        $statement = $this->connection->prepare($sql);
+
+        $statement->bindParam(':b', $buyer);
+        $statement->execute();
+        $result = $statement->fetch();
+        
+        return $result;
+    }
+
 
 }
 
