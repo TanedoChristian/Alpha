@@ -214,18 +214,22 @@ $buyer = trim($_SESSION['username']);
                 <div class="card-body p-4">
 
                     <div class="float-end">
+                   
                     <p class="mb-0 me-5 d-flex align-items-center">
                         <span class="small text-muted me-2">Order total:</span> <span
                         class="lead fw-normal">PHP <?php echo $totalPrice['total'] ?></span>
                     </p>
+                    
                     </div>
 
                 </div>
                 </div>
 
                 <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-light btn-lg me-2 bg-danger" style="color:white"><a href="checkout.php">Check Out</a> </button>
+                <button type="button" class="btn btn-light btn-lg me-2 bg-danger" style="color:white"><a href="javascript:history.back() " style="text-decoration: none;  color: white;">Continue Shopping </a> </button>
+                <button type="button" class="btn btn-light btn-lg me-2 bg-danger h" style="color:white"><a href="checkout.php" style="text-decoration: none;  color: white;">Check Out</a> </button>
                 </div>
+              
 
             </div>
             </div>

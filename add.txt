@@ -31,3 +31,69 @@
 ?>
 
 </div>
+
+
+==== comments ==
+
+        
+        <section class="commentS">
+            <div class="product-review-comment flex">
+                <div>
+                <h1 class="Bebas"> Product Ratings </h1>
+                <h3> Comment </h3>
+                
+
+                </div>  
+                <div class="comment-section">
+                <?php
+                    
+                    foreach($result as $r){
+                        ECHO <<<HERE
+                            
+                            <div class="comment-container">
+                            <span><i class="material-icons md-48 user-profile red">
+                            account_circle
+                            </i></span>
+                            <p class="Bebas">$r[username] </p>
+                            <p class="comment"> $r[date] </p>
+                            <p class="comment"> $r[comment] </p>
+                            
+                     
+                            </div>
+                            
+                        HERE;
+                    }
+                
+                ?>
+                     </div>
+            </div>
+
+
+        
+    <?php
+    
+    if(isset($_SESSION['username'])) {
+
+        ECHO <<<HERE
+
+        </section>
+
+        <div class="form-comment-container">
+
+   
+
+        <form action="" method="POST" class="form-comment">
+                
+        <input type="text" name="comment" placeholder="Add Comment">
+        <input type="submit" value="Comment" name="submit" style="background-color: #e52b1b;">
+
+        </form>
+        </div>
+
+        HERE;
+
+    }
+
+        
+
+    ?>

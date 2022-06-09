@@ -15,6 +15,9 @@ include '../templates/header.php';
         <section onmouseover="hidedropdown()">
             <?php echo" <p> $title </p>" ?>
             <div class="product-review-container">
+            
+            
+
 
             <?php
          
@@ -29,7 +32,7 @@ include '../templates/header.php';
             <div class="product-title-container">
                 <div>
                 <h1> $product </h1>
-                <h3 class="red"> PHP $productPrice .00</h3>
+                <h3 class=""> PHP $productPrice .00</h3>
                 </div>
                 <div class="buy-container">
                 <span>
@@ -42,7 +45,7 @@ include '../templates/header.php';
                 </a>
                 </span>
                 
-                <button class="buy-btn">Button</button>
+                <button class="buy-btn">Buy Now</button>
                 </div>
             </div>
 
@@ -54,11 +57,39 @@ include '../templates/header.php';
         </section>
         
         <section class="commentS">
+            
             <div class="product-review-comment flex">
                 <div>
                 <h1 class="Bebas"> Product Ratings </h1>
                 <h3> Comment </h3>
                 
+                <?php
+                    
+                    if(isset($_SESSION['username'])) {
+
+                        ECHO <<<HERE
+
+                    
+
+                        <div class="form-comment-container">
+
+                
+
+                        <form action="" method="POST" class="form-comment">
+                                
+                        <input type="text" name="comment" placeholder="Add Comment">
+                        <input type="submit" value="Add comment" name="submit" style="background-color: #e52b1b;">
+
+                        </form>
+                        </div>
+
+                        HERE;
+
+                 }
+
+        
+
+    ?>
 
                 </div>  
                 <div class="comment-section">
@@ -84,35 +115,9 @@ include '../templates/header.php';
                 ?>
                      </div>
             </div>
-
+            </section>
 
         
-    <?php
     
-    if(isset($_SESSION['username'])) {
-
-        ECHO <<<HERE
-
-        </section>
-
-        <div class="form-comment-container">
-
-   
-
-        <form action="" method="POST" class="form-comment">
-                
-        <input type="text" name="comment" placeholder="Add Comment">
-        <input type="submit" value="Comment" name="submit" style="background-color: #e52b1b;">
-
-        </form>
-        </div>
-
-        HERE;
-
-    }
-
-        
-
-    ?>
 </body>
 </html>

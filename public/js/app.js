@@ -40,6 +40,17 @@ $(".tag-product").click(function(){
 
 
 
+var btn = $('#btn-modal');
+
+$('#btn-modal').click(function(){
+    $('#modal').show();
+})
+
+
+$('#close').click(function(){
+    $('#modal').hide();
+})
+
 
 
 function hidedropdown(){

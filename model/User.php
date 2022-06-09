@@ -85,6 +85,26 @@ class User {
     }
 
 
+    public function setCodOrder($firstname, $lastname, $address, $phone_number, $landmark, $productName, $qty, $zipCode){
+        $sql = "INSERT INTO cod_order (firstname,lastname, address, phone_number,landmark,  zipcode, product_name, qty, category) values(:firstname, :lastname, :addr, :phone, :landmark, :zip, :product_name, :qty, 'cod')";
+        $statement = $this->connection->prepare($sql);
+
+        $statement->bindParam(':firstname', $firstname);
+        $statement->bindParam(':lastname', $lastname);
+        $statement->bindParam(':addr', $address);
+        $statement->bindParam(':phone', $phone_number);
+        $statement->bindParam(':landmark', $landmark);
+        $statement->bindParam(':zip', $zipCode);
+        $statement->bindParam(':qty', $qty);
+        $statement->bindParam(':product_name', $productName);
+   
+
+        $statement->execute();
+
+       
+    }
+
+
 }
 
 

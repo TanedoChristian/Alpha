@@ -97,7 +97,7 @@ $productPrice = getPrice($product);
 $database = new Database;
 $connection = $database->getConnection();
 
-$statement = $connection->prepare('SELECT * from comment where product_name =:product');
+$statement = $connection->prepare('SELECT * from comment where product_name =:product order by date desc');
 $statement->bindParam(":product", $product);
 $statement->execute();
 

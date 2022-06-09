@@ -137,7 +137,9 @@ $buyer = trim($_SESSION['username']);
 	</div>
     </div>
 
+<div class="spacer">
 
+</div>
 
   <section class="">
   <div class="container h-50">
@@ -198,21 +200,39 @@ $buyer = trim($_SESSION['username']);
                 ?>
 
             
+<div class="card mb-5">
+                <div class="card-body p-4">
+              
+                    <div class="float-end">
+                    <p class="mb-0 me-5 d-flex align-items-center">
+                        <span class="small text-muted me-2">Shipping Fee:</span> <span
+                        class="lead fw-normal">PHP 150.00</span>
+                    </p>
+                    <p class="mb-0 me-5 d-flex align-items-center">
+                        <span class="small text-muted me-2">Order total:</span> <span
+                        class="lead fw-normal">PHP <?php echo $totalPrice['total'] + 150?>.00</span>
+                    </p>
+                    
+                    </div>
 
+                </div>
+                </div>
                 
 
             </div>
             </div>
+            
         </div>
         
 
-
+<div class="checkout-info-container">
+    <div class="card-checkout">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <div class="container">
   <div id="Checkout" class="inline" style="">
-      <h1 class="primary" style="color: white; background-color: #e52b1b;">Pay Invoice</h1>
+      <h1 class="primary" style="color: white; background-color: #e52b1b;"> Via Card</h1>
       <div class="card-row">
           <span class="visa"></span>
           <span class="mastercard"></span>
@@ -254,12 +274,126 @@ $buyer = trim($_SESSION['username']);
                   <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
               </div>
           </div>
-          <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit" style="background-color: #e52b1b;">
-              <span class="align-middle">PHP <?php echo $totalPrice['total']; ?></span>
+          <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit" style="background-color: #e52b1b; border-radius: 20px">
+              <span class="align-middle">Submit</span>
+
+
           </button>
       </form>
   </div>
   
 </div>
-        </section>
+
+
+
+</div>
+
+
+<div class="or-payvia">
+    <h3> --OR-- </h3>
+</div>
+
+
+<div class="cod-payment">
+
+<button class="btn btn-block btn-success submit-button" id="btn-modal" type="submit" style="background-color: #e52b1b; border:none; padding: 10px 50px; border-radius: 20px">
+              <span class="align-middle"> Via COD</span>
+</button>
+</div>
+</div>
+
+  </section>
+
+
+  <section class="h-100 h-custom"">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+            <div id="modal">
+          <div class="card-body p-4 p-md-5" id="modal-content">
+          <span id="close"><i class="material-icons md-48 black" id="close"> close </i></span>
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">COD Info</h3>
+            
+
+            <form class="px-md-2" action="../scripts/cod-order.php" method="POST">
+
+            <div class="col-md-6 mb-4">
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" id="exampleDatepicker1" value="<?php echo $customer['firstname']?>" name="firstname" />
+                    <label for="exampleDatepicker1" class="form-label">Firstname</label>
+    
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+                <input type="text" class="form-control" id="exampleDatepicker1" value="<?php echo $customer['lastname']?>" name="lastname" />
+                    <label for="exampleDatepicker1" class="form-label">Lastname</label>
+               
+                </div>
+              </div>
+<div class="col-md-6 mb-4">
+                <input type="text" class="form-control" id="exampleDatepicker1" placeholder="ex: 3450" name="zip"/>
+                    <label for="exampleDatepicker1" class="form-label">Add Postal Code</label>
+               
+                </div>
+
+</div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" id="exampleDatepicker1" value="<?php echo $customer['address']?>" name="address"/>
+                    <label for="exampleDatepicker1" class="form-label">Address</label>
+    
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+                <input type="text" class="form-control" id="exampleDatepicker1" value="<?php echo $customer['phone_number']?>" name="phone"/>
+                    <label for="exampleDatepicker1" class="form-label">Phone Number</label>
+               
+                </div>
+              </div>
+
+          
+
+              <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                <div class="col-md-6">
+
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1w" class="form-control" name="landmark"/>
+                    <label class="form-label" for="form3Example1w">Add LandMark</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="flex">
+            
+              </div>
+              <br>
+              <input type="submit" class="btn btn-success btn-lg mb-1" style="background-color: #e52b1b; border: none;" name="submit">
+
+            </form>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+        
+
+            
 
