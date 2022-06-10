@@ -52,6 +52,11 @@ $('#close').click(function(){
 })
 
 
+$('#search-btn').click(function(){
+   
+    window.location.href = "http://localhost/Alpha/view/search-product.php?search=" + $('#search').val();
+})
+
 
 function hidedropdown(){
     $(document).ready(function(){

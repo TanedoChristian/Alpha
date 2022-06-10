@@ -950,6 +950,7 @@ a {
     gap: 5rem;
     margin-top: 5%;
     background-color: #eee;
+    
    
 }
 
@@ -960,6 +961,7 @@ a {
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+   
     
 }
 
@@ -1001,6 +1003,7 @@ a {
     flex-direction: column;
     width: 100%;
     background-color: #eee;
+    border-bottom: 5px solid white;
 }
 
 .form-comment-container {

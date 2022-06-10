@@ -45,7 +45,7 @@ include '../templates/header.php';
                 </a>
                 </span>
                 
-                <button class="buy-btn">Buy Now</button>
+                <button class="buy-btn"><a href="http://localhost/Alpha/scripts/buy-now.php?add-to-cart=$product" style="text-decoration: none; color:white;">Buy Now</a></button>
                 </div>
             </div>
 

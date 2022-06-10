@@ -63,7 +63,7 @@ if(isset($_SESSION['account_created'])){
         <div class="input-container">
           <input type="text" placeholder="Username" name="username">
           <input type="password" placeholder="Password" name="password">
-          <a href="change-password.php">Forgot Password? </a>
+          <a href="change-password.php">Change Password? </a>
           <h3 class="h3">
           <?php
             if(isset($_SESSION['error'])){

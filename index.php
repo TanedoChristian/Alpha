@@ -74,9 +74,9 @@ session_start();
         </div>
 
         <div class="search-bar flex">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" id="search" value="">
             <div class="search-icon-container flex">
-                <i class="material-icons md-60 search-icon">search</i>
+                <a id="search-btn"> <i class="material-icons md-60 search-icon">search</i></a>
             </div>
             
         </div>
@@ -85,7 +85,7 @@ session_start();
             <span><i class="material-icons md-48 user-profile">
             <?php
             if(isset($_SESSION['username'])){
-                echo "<p class=upper>" . strtoupper($_SESSION['username']) . '</p>';
+                echo "<a href='view/track-order.php' style='text-decoration:none; color:white;'><p class=upper>" . strtoupper($_SESSION['username']) . '</p></a>';
             } else {
                 echo "account_circle";
             }
@@ -159,19 +159,19 @@ session_start();
             <div class="circle-container">
                 <div class="circle-wrapper">
                     <div class="circle men">
-                        <img src="public/img/men.png" alt="" class="circle-img">
+                       <a href="http://localhost/Alpha/view/search-product.php?search=Men"><img src="public/img/men.png" alt="" class="circle-img"></a> 
                     </div>
                     <p> Men</p>
                 </div>
                 <div class="circle-wrapper">
                     <div class="circle">
-                        <img src="public/img/Ellipse 2.png" alt="" class="circle-img">
+                        <a href="http://localhost/Alpha/view/search-product.php?search=Women"> <img src="public/img/Ellipse 2.png" alt="" class="circle-img"></a>
                     </div>
                     <p> Women</p>
                 </div>
                 <div class="circle-wrapper">
                     <div class="circle">
-                        <img src="public/img/Ellipse 3.png" alt="" class="circle-img">
+                       <a href="http://localhost/Alpha/view/search-product.php?search=Basketball"> <img src="public/img/Ellipse 3.png" alt="" class="circle-img"></a>
                     </div>
                     <p> Basketball</p>
                 </div>

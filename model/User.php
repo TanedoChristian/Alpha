@@ -85,8 +85,8 @@ class User {
     }
 
 
-    public function setCodOrder($firstname, $lastname, $address, $phone_number, $landmark, $productName, $qty, $zipCode){
-        $sql = "INSERT INTO cod_order (firstname,lastname, address, phone_number,landmark,  zipcode, product_name, qty, category) values(:firstname, :lastname, :addr, :phone, :landmark, :zip, :product_name, :qty, 'cod')";
+    public function setCodOrder($firstname, $lastname, $address, $phone_number, $landmark, $productName, $qty, $zipCode,$user){
+        $sql = "INSERT INTO cod_order (firstname,lastname, address, phone_number,landmark,  zipcode, product_name, qty, category, user) values(:firstname, :lastname, :addr, :phone, :landmark, :zip, :product_name, :qty, 'cod', :user)";
         $statement = $this->connection->prepare($sql);
 
         $statement->bindParam(':firstname', $firstname);
@@ -96,6 +96,7 @@ class User {
         $statement->bindParam(':landmark', $landmark);
         $statement->bindParam(':zip', $zipCode);
         $statement->bindParam(':qty', $qty);
+        $statement->bindParam(':user', $user);
         $statement->bindParam(':product_name', $productName);
    
 
@@ -103,6 +104,64 @@ class User {
 
        
     }
+
+    public function removeCartByUser($user){
+        $sql = "DELETE from add_to_cart where user =:u";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->bindParam(':u', $user);
+        $statement->execute();
+
+    }
+
+    public function getPurchaseInfo($buyer){
+        $sql = "SELECT *, count(*) as count, (SELECT product_price from product where cod_order.product_name = product.product_name) as price from cod_order where user =:user group by product_name";
+        $statement = $this->connection->prepare($sql);
+        $statement->bindParam(':user', $buyer);
+        $statement->execute();
+
+        $result = $statement->fetchAll();
+
+        return $result;
+    }
+
+    public function getCustomerPurchaseInfo($buyer){
+        $sql = "SELECT * from cod_order where user = :user";
+        $statement = $this->connection->prepare($sql);
+        $statement->bindParam(':user', $buyer);
+
+        $statement->execute();
+
+        $result = $statement->fetch();
+        return $result;
+    }
+
+    
+
+    public function getTotalPurchasePrice($buyer){
+        $sql = "SELECT sum(product.product_price) as total from product inner join cod_order on cod_order.product_name = product.product_name where cod_order.user =:user";
+        $statement = $this->connection->prepare($sql);
+        
+        $statement->bindParam(':user', $buyer);
+        $statement->execute();
+        $result = $statement->fetch();
+
+        return $result;
+    }
+
+
+    public function getAllProduct($params){
+        $sql = "SELECT * from product where product_category =:p or product_tag =:p";
+        $statement = $this->connection->prepare($sql);
+
+        $statement->bindParam(':p', $params);
+        $statement->execute();
+
+        $result = $statement->fetchAll();
+
+        return $result;
+    }
+    
 
 
 }

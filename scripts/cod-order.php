@@ -27,9 +27,12 @@ if(isset($_POST['submit'])){
     
     
     foreach($cart as $r){
-        $user->setCodOrder($firstname,$lastname, $address, $phone, $landmark, $r['product_name'], $r['count'], $zip);
+        $user->setCodOrder($firstname,$lastname, $address, $phone, $landmark, $r['product_name'], $r['count'], $zip, $buyer);
     }
     
+    //$user->removeCartByUser($buyer);
+    $_SESSION['order-success'] = "Order Successfully";
+    header('location: ../view/track-order.php');
 
 }
  

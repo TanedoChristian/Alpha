@@ -80,9 +80,9 @@ $buyer = trim($_SESSION['username']);
         </div>
 
         <div class="search-bar flex">
-            <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" id="search" value="">
             <div class="search-icon-container flex">
-                <i class="material-icons md-60 search-icon">search</i>
+                <a id="search-btn"> <i class="material-icons md-60 search-icon">search</i></a>
             </div>
             
         </div>
@@ -137,6 +137,9 @@ $buyer = trim($_SESSION['username']);
 	</div>
     </div>
 
+    <div class="spacer">
+
+</div>
 
 
   <section class="vh-100">

@@ -4,7 +4,7 @@
 
 
 
-
+include_once '../scripts/product-model.php';
 
 ?>
 
@@ -76,9 +76,9 @@
         </div>
 
         <div class="search-bar flex">
-            <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" id="search" value="">
             <div class="search-icon-container flex">
-                <i class="material-icons md-60 search-icon">search</i>
+                <a id="search-btn"> <i class="material-icons md-60 search-icon">search</i></a>
             </div>
             
         </div>
@@ -134,11 +134,7 @@
 	</div>
     </div>
 
-<?php
-    include_once "../scripts/product-model.php";
-  
 
-?>
 <main>
     <p> 
    
@@ -146,7 +142,7 @@
         <h1 class="product-title-h1"> 
                 <?php
 
-                include_once '../scripts/product-model.php';
+                
 
                 echo $title;
              
@@ -157,8 +153,8 @@
     <div class="product-view-container">
 
                     <?php
-                        include_once '../scripts/product-model.php';
-
+                        
+                    
         
                         
                         foreach($result as $r){

@@ -174,9 +174,9 @@ $statement->execute();
         </div>
 
         <div class="search-bar flex">
-            <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" id="search" value="">
             <div class="search-icon-container flex">
-                <i class="material-icons md-60 search-icon">search</i>
+                <a id="search-btn"> <i class="material-icons md-60 search-icon">search</i></a>
             </div>
             
         </div>
@@ -185,7 +185,7 @@ $statement->execute();
             <span><i class="material-icons md-48 user-profile">
             <?php
             if(isset($_SESSION['username'])){
-                echo "<p class=upper>" . strtoupper($_SESSION['username']) . '</p>';
+                echo "<a href='view/track-order.php' style='text-decoration:none; color:white;'><p class=upper>" . strtoupper($_SESSION['username']) . '</p></a>';
             } else {
                 echo "account_circle";
             }
